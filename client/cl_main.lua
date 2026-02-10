@@ -6,10 +6,10 @@ local function DrawText3D(coords, text)
     if onScreen then
         SetTextScale(0.35, 0.35)
         SetTextFont(4)
-        SetTextProportional(1)
+        SetTextProportional(true)
         SetTextColour(255, 255, 255, 215)
         SetTextEntry("STRING")
-        SetTextCentre(1)
+        SetTextCentre(true)
         AddTextComponentString(text)
         DrawText(_x, _y)
 
@@ -43,7 +43,7 @@ CreateThread(function()
                 true, --プレイヤーの方を向くか
                 2, --p19 (通常は2)
                 false, -- 回転するか
-                nil, nil, -- テクスチャ辞書/名前
+                "", "", -- テクスチャ辞書/名前
                 false -- エンティティの上に描画するか
             )
 
