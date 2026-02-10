@@ -15,7 +15,7 @@ local function DrawText3D(coords, text)
 
         -- テキスト背景を描画
         local factor = (string.len(text)) / 370
-        DrawRect(_x, _y + 0.0125, -.015 + factor, 0.03, 41, 11, 41, 68)
+        DrawRect(_x, _y + 0.0125, -0.15 + factor, 0.03, 41, 11, 41, 68)
     end
 end
 
@@ -47,8 +47,10 @@ CreateThread(function()
                 false -- エンティティの上に描画するか
             )
 
-            DrawText3D(targetCoords + vector3(0.0, 0.0, 0.5), "Press ~y~[E]~w~ to Open Menu")
-
+            if distance < 3 then
+                DrawText3D(targetCoords + vector3(0.0, 0.0, 0.5), "Press ~y~[E]~w~ to Open Menu")
+            end
+    
             -- Interaction
             if distance < 1.5 then
                 if IsControlJustReleased(0, 38) then
