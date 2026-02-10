@@ -1,5 +1,5 @@
 fx_version 'cerulean'
-game 'gta'
+game 'gta5'
 lua54 'yes'
 
 author 'senganull'
