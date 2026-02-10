@@ -6,5 +6,5 @@ author 'senganull'
 version '1.0.0'
 
 client_scripts {
-    clinet/cl_main.lua
+    'clinet/cl_main.lua'
 }
